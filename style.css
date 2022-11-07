@@ -1,0 +1,99 @@
+:root {
+    --arena-bg: #c1d775;
+    --button-bg: #543d3a;
+    --font-colour: #000;
+    --button-font-colour: white;
+    --border-radius: 4px;
+    --font: monospace;
+    font-family: var(--font);
+    text-transform: uppercase;
+}
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#arena {
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    appearance: none;
+    font-family: var(--font);
+    outline: none;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    background: #000;
+    color: var(--button-font-colour);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: 170%;
+}
+#start-button:active {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+#start-button:focus-visible {
+    background: var(--button-font-colour);
+    border-color: var(--font-colour);
+    color: var(--font-colour);
+}
+#controls {
+    margin-top: 10px;
+    position: relative;
+}
+
+.game-scores{
+    display: flex;
+    justify-content: space-around;
+    max-width: 406px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.game-scores__box{
+    z-index: 1;
+    color: yellow;
+    user-select: none;
+    font-size: 150%;
+    padding: 10px 15px;
+	min-width: 160px;
+	height: 50px;
+	background: #121214;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#score,#records {
+    z-index: 1;
+    color: yellow;
+    user-select: none;
+    padding: 10px 15px;
+}
+
+#score{
+    color: #D21855;
+}
+
+#records{
+    color: blue;
+}
+
+.info{
+    font-size: 25px;
+    color: #D21855;
+    margin-top: 20px;
+    border: 1px solid green;
+    padding: 5px 10px;
+    max-width: 590px;
+    text-align: center;
+}
